@@ -35,3 +35,18 @@ The input arrayOfInts will always have at least three integers.
 Does your function work with negative numbers? If arrayOfInts is [-10, -10, 1, 3, 2][−10,−10,1,3,2] we should return 300300 (which we get by taking -10 * -10 * 3−10∗−10∗3).
 
 We can do this in O(n)O(n) time and O(1)O(1) space.
+
+### MergedMeeting
+#### Your company built an in-house calendar tool. You want to add a feature to see the times in a day when everyone is available.
+
+To do this, you’ll need to know when any team is having a meeting. In HiCal, a meeting is stored as objects ↴ with attributes startTime and endTime . These integers represent the number of 30-minute blocks past 9:00am.
+
+Write a function mergeRanges() that takes an array of meeting time ranges and returns an array of condensed ranges.
+
+Do not assume the meetings are in order. The meeting times are coming from multiple teams.
+
+Write a solution that's efficient even when we can't put a nice upper bound on the numbers representing our time ranges. Here we've simplified our times down to the number of 30-minute slots past 9:00 am. But we want the function to work even for very large numbers, like Unix timestamps. In any case, the spirit of the challenge is to merge meetings where startTime and endTime don't have an upper bound.
+
+Make sure that your function won't "leave out" the last meeting.
+
+We can do this in O(n\lg{n})O(nlgn) time.
