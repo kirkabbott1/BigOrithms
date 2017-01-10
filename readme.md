@@ -50,3 +50,17 @@ Write a solution that's efficient even when we can't put a nice upper bound on t
 Make sure that your function won't "leave out" the last meeting.
 
 We can do this in O(n\lg{n})O(nlgn) time.
+
+### CoinsPossible
+#### Write a function that, given:
+
+1. an amount of money
+2. an array of coin denominations
+computes the number of ways to make amount of money with coins of the available denominations.
+
+Example: for amount=44 (44¢) and denominations=[1,2,3][1,2,3] (11¢, 22¢ and 33¢), your program would output 44—the number of ways to make 44¢ with those denominations:
+
+1¢, 1¢, 1¢, 1¢
+1¢, 1¢, 2¢
+1¢, 3¢
+2¢, 2¢
