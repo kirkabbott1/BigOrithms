@@ -78,3 +78,24 @@ Optimize for space and time. Favor speeding up the getter functions (getMax(), g
 Temperatures will all be inserted as integers. We'll record our temperatures in Fahrenheit, so we can assume they'll all be in the range 0..1100..110.
 
 If there is more than one mode, return any of the modes.
+
+### BinaryBalanced
+#### write a function to see if the difference between the depths of any two leaf nodes is no greater than one.
+sample binary tree class
+```
+function BinaryTreeNode(value) {
+  this.value = value;
+  this.left  = null;
+  this.right = null;
+}
+
+BinaryTreeNode.prototype.insertLeft = function(value) {
+  this.left = new BinaryTreeNode(value);
+  return this.left;
+};
+
+BinaryTreeNode.prototype.insertRight = function(value) {
+  this.right = new BinaryTreeNode(value);
+  return this.right;
+};
+```
