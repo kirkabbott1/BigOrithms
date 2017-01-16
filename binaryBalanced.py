@@ -1,3 +1,20 @@
+# sample binary tree node class
+class BinaryTreeNode:
+
+    def __init__(self, value):
+        self.value = value
+        self.left  = None
+        self.right = None
+
+    def insert_left(self, value):
+        self.left = BinaryTreeNode(value)
+        return self.left
+
+    def insert_right(self, value):
+        self.right = BinaryTreeNode(value)
+        return self.right
+
+# solution
 def is_balanced(tree_root):
 
     # a tree with no nodes is superbalanced, since there are no leaves!
