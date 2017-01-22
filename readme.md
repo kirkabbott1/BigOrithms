@@ -99,3 +99,6 @@ BinaryTreeNode.prototype.insertRight = function(value) {
   return this.right;
 };
 ```
+
+### validBinaryTree
+#### Write a function to check that a binary tree ↴ is a valid binary search tree
