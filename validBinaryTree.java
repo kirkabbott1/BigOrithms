@@ -46,3 +46,23 @@ public boolean bstChecker(BinaryTreeNode root) {
     // (at this point we have checked all nodes)
     return true;
 }
+
+
+// recursive
+
+public boolean bstCheckerRecursive(BinaryTreeNode root) {
+  return bstCheckerRecursive(root, Integer.MIN_VALUE, Integer.MAX_VALUE);
+}
+
+public boolean bstCheckerRecursive(BinaryTreeNode root, int lowerBound, int upperBound) {
+  if (root == null) {
+      return true;
+  }
+
+  if (root.value > upperBound || root.value < lowerBound) {
+      return false;
+  }
+
+  return bstCheckerRecursive(root.left, lowerBound, root.value)
+      && bstCheckerRecursive(root.right, root.value, upperBound);
+}
