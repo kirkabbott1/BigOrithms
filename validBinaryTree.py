@@ -22,3 +22,17 @@
     # if none of the nodes were invalid, return true
     # (at this point we have checked all nodes)
     return True
+
+
+
+
+
+  def bst_checker_recursive(root, lower_bound=-float('inf'), upper_bound=float('inf')):
+    if not root:
+        return True
+
+    if (root.value > upper_bound or root.value < lower_bound):
+        return False
+
+    return bst_checker_recursive(root.left, lower_bound, root.value) \
+        and bst_checker_recursive(root.right, root.value, upper_bound)
